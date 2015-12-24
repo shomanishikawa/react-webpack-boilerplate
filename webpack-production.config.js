@@ -31,7 +31,7 @@ module.exports = {
   module: {
     loaders: [
       { test: /\.jsx$/,
-        loader: 'react-hot!babel',
+        loader: 'babel',
         include: path.join(__dirname, 'src') },
       { test: /\.js$/,
         loader: 'babel',
