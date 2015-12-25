@@ -40,5 +40,9 @@ module.exports = {
         loader: 'style!css!sass!postcss-loader',
         include: path.join(__dirname, 'css') }
     ]
+  },
+
+  postcss: function() {
+    return [autoprefixer]
   }
 }
