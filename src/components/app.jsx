@@ -1,8 +1,8 @@
 import React from 'react';
 
 const data = [
-  {id: 1, author: "Shoma Nishikawa", text: "This is one comment"},
-  {id: 2, author: "Jordan Walke", text: "This is *another* comment"}
+  {id: 1, author: "Sddhoma Nishikawa", text: "This is one comment"},
+  {id: 2, author: "Jrdan dfdf", text: "This is *another* comment"}
 ];
 
 export default class Comment extends React.Component {

@@ -3,20 +3,22 @@ var webpack = require('webpack');
 
 module.exports = {
   devtool: 'eval',
-
+  context: path.join(__dirname, 'src'),
   entry: [
-    'webpack-dev-server/client?http://localhost:3000',
-    'webpack/hot/only-dev-server',
-    './src/entry'
+    // 'webpack-dev-server/client?http://localhost:3000',
+    // 'webpack/hot/only-dev-server',
+    'webpack-hot-middleware/client?path=/__webpack_hmr&timeout=20000',
+    './entry.js'
   ],
 
   output: {
     path: path.join(__dirname, 'public'),
     filename: 'bundle.js',
-    publicPath: '/public/'
+    publicPath: '/assets/'
   },
 
   plugins: [
+    new webpack.optimize.OccurenceOrderPlugin(),
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoErrorsPlugin()
   ],

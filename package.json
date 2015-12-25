@@ -2,6 +2,7 @@
   "name": "webpack1",
   "version": "1.0.0",
   "description": "",
+  "main": "server.js",
   "scripts": {
     "start": "node server.js",
     "postinstall": "webpack --config ./webpack-production.config.js --progress --colors"
@@ -40,7 +41,9 @@
     "sass-loader": "^1.0.3",
     "style-loader": "^0.12.3",
     "url-loader": "^0.5.6",
-    "webpack": "^1.10.5"
+    "webpack": "^1.10.5",
+    "webpack-dev-middleware": "^1.4.0",
+    "webpack-hot-middleware": "^2.6.0"
   },
   "devDependencies": {
     "babel-eslint": "^4.0.5",
