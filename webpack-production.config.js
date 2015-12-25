@@ -1,5 +1,6 @@
 var path = require('path');
 var webpack = require('webpack');
+var autoprefixer = require('autoprefixer');
 
 module.exports = {
   devtool: 'source-map',
@@ -36,7 +37,7 @@ module.exports = {
         loader: 'babel',
         exclude: /node_modules/ },
       { test: /\.scss?$/,
-        loader: 'style!css!sass',
+        loader: 'style!css!sass!postcss-loader',
         include: path.join(__dirname, 'css') }
     ]
   }

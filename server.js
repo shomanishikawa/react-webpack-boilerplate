@@ -10,11 +10,9 @@ var app = express();
 var isDevelopment = (process.env.NODE_ENV !== 'production');
 var config = require('./webpack.config');
 var compiler = webpack(config)
-var static_path = path.join(__dirname, 'public');
 
-
+var STATIC_PATH = path.join(__dirname, 'public');
 var COMMENTS_FILE = path.join(__dirname, 'comments.json');
-
 
 
 if (isDevelopment) {
@@ -33,11 +31,11 @@ if (isDevelopment) {
   }));
 }
 
-app.use(express.static(static_path));
+app.use(express.static(STATIC_PATH));
 
 // app.get('/', function (req, res) {
 //     res.sendFile('index.html', {
-//       root: static_path
+//       root: STATIC_PATH
 //     });
 // })
 
@@ -57,18 +55,5 @@ app.get('/api/comments', function(req, res) {
 
 app.listen(process.env.PORT || 1979, function (err) {
   if (err) { console.log(err) };
-  console.log('Prod Server Listening');
+  console.log('server listening on port', process.env.PORT || 1979);
 });
-
-// if (isDevelopment) {
-  
-//   var WebpackDevServer = require('webpack-dev-server');
-
-//   new WebpackDevServer(webpack(config), {
-//     publicPath: config.output.publicPath,
-//     hot: true
-//   }).listen(3000, 'localhost', function (err, result) {
-//     if (err) { console.log(err) }
-//     console.log('Dev Server Listening at localhost:3000');
-//   });
-// }
