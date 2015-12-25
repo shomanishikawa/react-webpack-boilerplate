@@ -3,15 +3,14 @@ var webpack = require('webpack');
 
 module.exports = {
   devtool: 'source-map',
-
+  context: path.join(__dirname, 'src'),
   entry: [
-    './src/entry'
+    './entry.js'
   ],
 
   output: {
-    path: path.join(__dirname, 'public'),
-    filename: 'bundle.js',
-    publicPath: '/assets/'
+    path: path.join(__dirname, 'public', 'assets'),
+    filename: 'bundle.js'
   },
 
   plugins: [
