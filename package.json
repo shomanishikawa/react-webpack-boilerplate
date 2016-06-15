@@ -25,6 +25,7 @@
     "file-loader": "^0.8.4",
     "fs": "0.0.2",
     "history": "^1.13.1",
+    "iphone-inline-video": "^1.8.3",
     "jquery": "^2.1.4",
     "lodash": "^3.9.3",
     "node-libs-browser": "^0.5.2",

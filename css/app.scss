@@ -5,3 +5,10 @@
 body {
   background: linear-gradient(to right, #1e5799 0%,#2989d8 50%,#207cca 75%,#7db9e8 100%);
 }
+
+.IIV::-webkit-media-controls-play-button,
+.IIV::-webkit-media-controls-start-playback-button {
+    opacity: 0;
+    pointer-events: none;
+    width: 5px;
+}
